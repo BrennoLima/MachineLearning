@@ -27,13 +27,11 @@ min_train = X_train.min()
 range_train = (X_train - min_train).max()
 X_train_scalled = (X_train - min_train)/range_train
 
-min_test = X_test.min()
-range_test = (X_test - min_test).max()
-X_test_scalled = (X_test - min_test)/range_test
+X_test_scalled = (X_test - min_train)/range_train
 
 # Model SVC support vector machine
 from sklearn.svm import SVC
-classifier = SVC(C = 7)
+classifier = SVC(C = 7, gamma = 0.3)
 classifier.fit(X_train_scalled, y_train)
 
 # model Random Forest 
