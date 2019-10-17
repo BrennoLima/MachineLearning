@@ -33,7 +33,7 @@ X_test_scalled = (X_test - min_test)/range_test
 
 # Model SVC support vector machine
 from sklearn.svm import SVC
-classifier = SVC(C = 7, gamma = 0.3)
+classifier = SVC(C = 7)
 classifier.fit(X_train_scalled, y_train)
 
 # model Random Forest 
